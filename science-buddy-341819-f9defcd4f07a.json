@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "science-buddy-341819",
+  "private_key_id": "f9defcd4f07adf4f666424c3b123c98f3355a84e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQC1GjdPjqPWNYSx\ndFEbvwLHuwpbJgyHn4ffirN4It2+BO2kjrTv3lSSZjQcOyPCRAnOG0yB6CoAPaCB\nkr8HnE7mAOyJOMXXwUxLgEnucjtkZZFaj9isn9MEk6mam8wxXESIuJ/JvQI3k6cy\nVabGiqfZyZ//u/mAfgBgNKmikMbI+GH9R00pGF3H6avb1AUQvDpC76ituWLJW6pZ\nK9rnfgrIe+d7eqkRkhAIQ0JlYyh2KNJEuIPWYf7iUpn1WXAKTU1y/G/F1ND8wxqz\nP0Kel5VZEHhWsAl9cpw+ZuHWRvh2n/jhy8oKJzZmVHzOe1oTXB76/RZM4NhTL6xL\nIorg5fDbAgMBAAECggEAGsoWfXvFq5W+G7vvlZGjWSVHamVN/C/ymvQ7CR3rPEUh\nXDLJ/COg0gkxUy3CY+XJp4XtQtgzglabbB9nh7otB6QCWWgfCAPtg8ul5BJcy8Sk\nhEd8D0kTH32yXI8IXRLfhnP9GwwNDGiYln8KDRuMqdBEDUHirgm1h4WyxDvzU93+\nddL5+/Q2y4G6yz/dV6wM2ixjAj+I7HSjNEL2iJB/Ev0ZaTKLJJUzGHQvGzeieYI9\nNhXFxaMoTaDmBhCfK/11Jn0/mZbA6QHT/+4UoqJQMvy8UJBcRDeTzOFgK7HymNOu\ngHWY6VGkUowX0PZJBQAa4PLVP/AOC/4O91yEEH1iHQKBgQDbilE/vx8sXwyssDim\nRxCv/7pfz14+OBpz8vCV3Ob4hcEUAxb3rGEiH36k4H11jfGc6xwi+xkT9LLmDvM1\n3wS7DwhJyMOkXY2+N7+qYn9OWxj2kx2rcUYLeLcrfmGYK0johq8Rb9cC2ikIuhsr\nTIIOA3cOZWyaiQzs9ssP+1MmlQKBgQDTLblw2a6MPjB5Qyu0/dbi1oZjWdiOmpaA\ngzH+PoSmI4MwkpKpWeFILTT2DN9RCjwuJUlOetluGJhv1m7AFnwZ0ZjbpQtMgEsH\nHaj1hidi6MOR8YBqT7oDPxmP8jNY9YzsyEZk8tBjmlAR6UA3xh9SNArMdJcIWrWz\nr6t7WHUNrwKBgEQ/MlTDwBgWECWavnGKQ/jCYZipKR3kaOzEh9++hRqa0dO7xicG\nMkfeTItKshWaI5LpT5zcPAaFGhwEZ7zGcH0KBkSRoaf14TtRr0ZzSin8jb0RLLcA\nBotIYoCl0Aby5b5LKB8eilN7qCfrWsjSBtf+YcNa6jD8C8WaTrPQKCAlAn8LjHSX\nt0/UW5JLD2FUhI072n9+72roYYvZe1NAlCqs60RBY8KhgEjRqac7zXho9iZUX7Wi\nlRVO8AlmFFP6LUCcKNozKNN1W46+1OBojO2aeyA22v4q0jFZ/BlpxdUJCGSsjkdL\nPfwndkjqsdbRNgSAelgc1kNsMYm+Sd0W4b+FAoGAZibPXnYKq9foTjdj144GPSqf\n5klOZUTjLm/poVMDe24PGqzf6Wfwr0faznCFFPI1y0867WTnyMjh2TNPWNfT+63m\n1b1GER+OBSLw56eu72MqzKILDvsgjaIZpLtJ1la8WVNU/6bgKwBWAhtljad2B69p\nj1m5mYSAKaVS4QO5h/8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "science-buddy@science-buddy-341819.iam.gserviceaccount.com",
+  "client_id": "109411200571661174851",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/science-buddy%40science-buddy-341819.iam.gserviceaccount.com"
+}
