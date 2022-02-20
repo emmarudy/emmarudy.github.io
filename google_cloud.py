@@ -56,8 +56,7 @@ def text_to_speech(abstract, accent, speed):
     with open("gcloud_abstract.mp3", "wb") as out:
         # Write the response to the output file.
         out.write(response.audio_content)
-        print('Audio content written to file "gcloud_abstract.mp3"')
-
-    return "./gcloud_abstract.mp3"
+        #print('Audio content written to file "gcloud_abstract.mp3"')
+    return "/Users/lynnesmacbook/Documents/GitHub/science-buddy/gcloud_abstract.mp3"
     
     # return abstract
