@@ -1,10 +1,11 @@
+#thank you for helping us
 from google_cloud import get_abstract, text_to_speech
 from markupsafe import escape
 from flask import Flask, render_template, request, url_for, flash, redirect
 
 from google_cloud import get_abstract
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".")
 
 messages = [{'title': 'Message One'},
              #'content': 'Message One Content'},
@@ -12,7 +13,7 @@ messages = [{'title': 'Message One'},
              #'content': 'Message Two Content'}
             ]
 
-@app.route('/')
+#@app.route('/')
 # def science_buddy():
 #     site = "https://www.sciencedirect.com/science/article/pii/S0043135402004967"
 #     abstract = get_abstract(site)
@@ -21,26 +22,19 @@ messages = [{'title': 'Message One'},
 #     text_to_speech(abstract, accent, speed)
 #     return '<h1>Science Buddy</h1>'
 
-@app.route('/create/', methods=('GET', 'POST'))
-def create():
-    if request.method == 'POST':
-        title = request.form['title']
-        #content = request.form['content']
-
-        if not title:
-            flash('Title is required!')
-        # elif not content:
-        #     flash('Content is required!')
-        else:
-            messages.append({'title': title, 'content': content})
-            return redirect(url_for('index'))
-
-    return render_template('create.html')
-
-@app.route('/index/')
+@app.route('/')
 def index():
-    return render_template('index.html', messages=messages)
+    return render_template("index.html")
+
+@app.route('/parse', methods=['POST'])
+def parse():
+    paper_url = request.form['paper_url']
+    abstract = get_abstract(paper_url)
+    accent = "United Kingdom"
+    speed = "regular"
+    abstract_mp3 = text_to_speech(abstract, accent, speed)
+    return f'<a href="{abstract_mp3}">Download abstract MP3 file</a>'
 
 @app.route('/about/')
 def about():
-    return '<h3>This is a Flask web application.</h3>'
+    return '<h3>Pearl Hacks 2022!</h3>'
