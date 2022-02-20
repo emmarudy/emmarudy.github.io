@@ -3,14 +3,26 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from google.cloud import texttospeech
 
+# site= input("Please paste the scientific paper here: ") #"https://www.sciencedirect.com/science/article/pii/S0043135402004967"
+# hdr = {'User-Agent': 'Mozilla/5.0'}
+# req = Request(site,headers=hdr)
+# page = urlopen(req)
+# print(site)
+# soup = BeautifulSoup(page)
+# abstract = soup.find("div", {"id": "abstracts"}).text
+# print(abstract)
+
 def get_abstract(site):
     #site= input("Please paste the scientific paper here: ") #"https://www.sciencedirect.com/science/article/pii/S0043135402004967"
+    #site = "https://www.science.org/doi/10.1126/science.1255057"
     hdr = {'User-Agent': 'Mozilla/5.0'}
     req = Request(site,headers=hdr)
     page = urlopen(req)
+    #print(site)
     soup = BeautifulSoup(page)
-
-    return soup.find("div", {"id": "abstracts"}).text
+    abstract = soup.find("div", {"id": "abstracts"}).text
+    #print(abstract)
+    return abstract
 
 def text_to_speech(abstract, accent, speed):
     # Instantiates a client
@@ -51,12 +63,12 @@ def text_to_speech(abstract, accent, speed):
     response = client.synthesize_speech(
         input=synthesis_input, voice=voice, audio_config=audio_config
     )
-
+    
     # The response's audio_content is binary.
     with open("gcloud_abstract.mp3", "wb") as out:
         # Write the response to the output file.
         out.write(response.audio_content)
         #print('Audio content written to file "gcloud_abstract.mp3"')
-    return "/Users/lynnesmacbook/Documents/GitHub/science-buddy/gcloud_abstract.mp3"
+    # return "gcloud_abstract.mp3"
     
     # return abstract

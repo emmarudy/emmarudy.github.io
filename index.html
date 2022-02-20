@@ -1,3 +1,151 @@
-<form action="{{ url_for('parse') }}" method="post">
-    <input type="text" name="paper_url" id="url-box" placeholder="Enter scientific paper URL..."  style="max-width: 1000px;" autofocus required>
-    <input type="submit"></form>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: lavender;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+/* .leftcolumn {  
+    float: left;
+    width: 75%;
+} */
+
+/* Right column
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+} */
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: white;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {  
+    width: 100%;
+    padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+    float: none;
+    width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Science Buddy</h1>
+    <p>Welcome to Science Buddy! The user friendly way to make reading scientific abstracts fast and simple by turning them into audio files.</p>
+</div>
+
+<div class="topnav">
+    <a href="https://www.omicsonline.org/scientific-journals.php" style="float:left" target="_blank">Scientific Journal Database</a>
+    <a href="https://spie.org/news/photonics-focus/janfeb-2020/how-to-write-a-scientific-paper?SSO=1" style="float:center" target="_blank">How to Write A Science Paper</a>
+    <a href="https://docs.google.com/document/d/1_9qMcoOFYZJKDkkn-x3FUD5UpDtaPTox55uGoLIXnMY/edit" style="float:right" target="_blank">Citations</a>
+</div>
+
+<class="row">
+    <div class="card">
+        <h2>Convert Your Abstract Here</h2>
+        <h5>Please type in the link to your scientific article in the box below:</h5>
+        <form action="{{ url_for('parse') }}" method="post">
+            <input type="text" name="paper_url" id="paper_url" placeholder="Enter scientific paper URL..."  style="width: 500px;" autofocus required>
+            <input type="submit"></form>
+        <p>By typing in the DOI link to your paper in the above box, an MP3 file will be generated of the abstract that you can download to you computer. <!--The text read within the file will also be generated onto the page, so you can ensure the program read the paper correctly.--></p>
+    </div>
+    <div class="card">
+        <h2>What is Science Buddy?</h2>
+        <h5>Pearl Hacks -- Feb 20, 2022</h5>
+        <center><img src="https://img.freepik.com/free-vector/colourful-science-work-concept_23-2148539571.jpg?size=626&ext=jpg" alt="Simply Easy Learning" width="500" height="200"></center>
+        <p>As STEM students, we found it difficult and tedious to read many scientific papers in one sitting because of the difficult language and dull tone. In order to solve this problem, we created Science Buddy! Science Buddy is a user friendly program that takes in the link to a scientific article and spits out the paper's abstract and an MP3 file of the abstract. This way students can listen to the abstracts in a fun text-to-speech voice! Thus, making reading scientific papers easier. This website also has a few links allowing users to access a large database of scientific journals on a variety of subjects and how to write a quality science paper. </p>
+        <p>We are beginner coders! In the future, we hope to add a "print abstract" function as well as the option to define difficult scientific terminology.</p>
+    </div>
+    <!--<div class="rightcolumn">-->
+    <div class="card">
+        <h2>About Us</h2>
+        <p>We are three undergraduate Environmental Science majors who are constantly reading through abstracts to find papers we can use in our research. We hope to make reading science more accesible to all.</p>
+    </div>
+    <!--</div>-->
+</div>
+
+<div class="footer">
+    <h2>We Love Science!</h2>
+</div>
+
+</body>
+</html>
