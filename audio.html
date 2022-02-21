@@ -5,11 +5,14 @@
     </head>
     <body>
     <h2>Serving audio files from Flask</h2>
-    {% for file in audio_files %}
-    <audio controls>
-        <source src={{ url_for('static', filename="/Users/lynnesmacbook/Documents/GitHub/science-buddy/gcloud_abstract.mp3") }} type="audio/mpeg">
+    
+    <!-- <audio controls>
+        <source src={{ url_for('static', filename='gcloud_abstract.mp3') }} type="audio/mpeg">
+    </audio> -->
+    <audio>
+        <source{{ url_for('static', filename='gcloud_abstract.mp3') }} type="audio/mpeg">
+        download here
     </audio>
-    {% endfor %}
     <p>Click on play icon to play</p>
     </body>
 </html>
